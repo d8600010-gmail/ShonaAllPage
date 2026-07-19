@@ -96,11 +96,10 @@
   /* ---- Tower / card grid ---- */
   .grid{
     display:grid;
-    grid-template-columns:repeat(5, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     gap:18px;
     margin-top:6px;
   }
-  @media (max-width: 1100px){ .grid{grid-template-columns:repeat(3,1fr);} }
   @media (max-width: 700px){ .grid{grid-template-columns:repeat(2,1fr);} }
   @media (max-width: 480px){ .grid{grid-template-columns:1fr;} }
   .card{
@@ -174,6 +173,7 @@
   .card.tower-c .plaque{background:var(--coral); color:var(--parchment);}
   .card.tower-d .plaque{background:#8fd6b4; color:var(--ink-deep);}
   .card.tower-e .plaque{background:#b98fd6; color:var(--ink-deep);}
+  .card.tower-f .plaque{background:#7fc4d6; color:var(--ink-deep);}
   footer{
     margin-top:56px;
     padding-top:22px;
@@ -193,7 +193,7 @@
   <div class="eyebrow">大立昇．吉的堡 CASTLE PORTAL</div>
   <h1>數位城堡，<span>五座塔</span>各司其職</h1>
   <p class="lede">把散落各處的教學、行政與衛教網站，收進同一座城堡。挑一座塔，直接推門進去。</p>
-  <svg class="skyline" viewBox="0 0 1000 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="城堡天際線插圖，五座燈火塔樓">
+  <svg class="skyline" viewBox="0 0 1150 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="城堡天際線插圖，六座燈火塔樓">
     <defs>
       <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#0f1329"/>
@@ -204,21 +204,23 @@
         <stop offset="100%" stop-color="#20264a"/>
       </linearGradient>
     </defs>
-    <rect x="0" y="0" width="1000" height="190" fill="url(#sky)"/>
+    <rect x="0" y="0" width="1150" height="190" fill="url(#sky)"/>
     <!-- stars -->
     <g fill="#e9c48a" opacity="0.5">
       <circle cx="80" cy="30" r="1.4"/><circle cx="180" cy="18" r="1"/><circle cx="330" cy="26" r="1.2"/>
       <circle cx="470" cy="14" r="1"/><circle cx="600" cy="30" r="1.3"/><circle cx="740" cy="20" r="1"/>
-      <circle cx="860" cy="34" r="1.4"/><circle cx="930" cy="16" r="1"/>
+      <circle cx="860" cy="34" r="1.4"/><circle cx="930" cy="16" r="1"/><circle cx="1060" cy="24" r="1.2"/>
+      <circle cx="1110" cy="14" r="1"/>
     </g>
     <!-- back wall -->
-    <rect x="0" y="120" width="1000" height="70" fill="url(#wallgrad)"/>
+    <rect x="0" y="120" width="1150" height="70" fill="url(#wallgrad)"/>
     <!-- battlements -->
     <g fill="#20264a">
       <rect x="0" y="112" width="20" height="10"/><rect x="30" y="112" width="20" height="10"/>
       <rect x="60" y="112" width="20" height="10"/><rect x="90" y="112" width="20" height="10"/>
       <rect x="120" y="112" width="20" height="10"/><rect x="150" y="112" width="20" height="10"/>
-      <rect x="960" y="112" width="20" height="10"/><rect x="980" y="112" width="18" height="10"/>
+      <rect x="960" y="112" width="20" height="10"/><rect x="980" y="112" width="20" height="10"/>
+      <rect x="1120" y="112" width="20" height="10"/>
     </g>
     <!-- five towers, evenly spaced -->
     <!-- Tower A: 學 (Reading Club) x~135 -->
@@ -262,6 +264,14 @@
       <rect class="window flicker-e" x="852" y="84" width="12" height="18" rx="1" fill="#d9b8ef"/>
       <rect class="window flicker-e" x="852" y="116" width="12" height="18" rx="1" fill="#d9b8ef"/>
       <rect class="window flicker-e" x="852" y="148" width="12" height="18" rx="1" fill="#d9b8ef"/>
+    </g>
+    <!-- Tower F: 譜 (Piano Score) x~1030 -->
+    <g>
+      <rect x="995" y="52" width="70" height="138" fill="#2b3462"/>
+      <polygon points="995,52 1030,18 1065,52" fill="#4c8fa0"/>
+      <rect class="window flicker-a" x="1017" y="77" width="12" height="18" rx="1" fill="#7fc4d6"/>
+      <rect class="window flicker-a" x="1017" y="109" width="12" height="18" rx="1" fill="#7fc4d6"/>
+      <rect class="window flicker-a" x="1017" y="141" width="12" height="18" rx="1" fill="#7fc4d6"/>
     </g>
     <!-- gate -->
     <path d="M470 190 L470 145 Q500 118 530 145 L530 190 Z" fill="#12172e"/>
@@ -307,10 +317,18 @@
       <p>認識職場霸凌的樣貌、辨識警訊與求助管道，陪同事在遇到不對等對待時，找到安全的因應方式。</p>
       <span class="enter">推門進入<span class="arrow">→</span></span>
     </a>
+    <a class="card tower-f" href="https://castlepartywu-svg.github.io/PianoScore/" target="_blank" rel="noopener">
+      <div class="plaque">譜</div>
+      <div class="icon">🎹</div>
+      <h2>琴譜工坊</h2>
+      <div class="en">PIANO SCORE</div>
+      <p>鋼琴樂譜與練習資源整理站，收錄曲目樂譜、練習提示與教學筆記，方便隨時查閱與延伸練習。</p>
+      <span class="enter">推門進入<span class="arrow">→</span></span>
+    </a>
   </div>
   <footer>
     <span>大立昇．吉的堡 數位城堡入口 · 內部資源整合頁</span>
-    <span>五座塔：學・財・憶・康・護</span>
+    <span>六座塔：學・財・憶・康・護・譜</span>
   </footer>
 </div>
 </body>
